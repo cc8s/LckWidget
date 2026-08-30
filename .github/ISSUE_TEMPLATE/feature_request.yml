@@ -1,48 +1,44 @@
-name: 기능 제안 / Feature request
-description: 새 기능이나 개선 아이디어
+name: Feature request
+description: A new feature or an improvement
 labels: ["enhancement"]
 body:
   - type: markdown
     attributes:
       value: |
-        제안 전에 README의 **알려진 한계**와 **에셋 정책**을 확인해 주세요.
-        앱 위젯은 `RemoteViews` 위에서 동작하므로 애니메이션, 커스텀 폰트,
-        배경 블러, 임의 도형 렌더링은 구현할 수 없습니다.
-        팀 로고 표시는 상표 문제로 받지 않습니다.
-
         Please skim **Known limitations** and **Asset policy** in the README
-        first. `RemoteViews` rules out animations, custom fonts, blur, and
-        arbitrary shapes, and team logos are out of scope for trademark reasons.
+        first. `RemoteViews` rules out animations, custom fonts, background
+        blur, and arbitrary shape rendering, and team logos are out of scope
+        for trademark reasons.
 
   - type: textarea
     id: problem
     attributes:
-      label: 어떤 불편을 해결하나요? / What problem does this solve?
-      description: 기능 자체보다, 그 기능이 없어서 겪는 상황을 적어 주세요.
-      placeholder: "응원하는 팀 경기만 보고 싶은데 다른 경기에 밀려서 안 보입니다."
+      label: What problem does this solve?
+      description: Describe the situation you run into, not the feature itself.
+      placeholder: "I only care about one team, but their match gets pushed off the widget."
     validations:
       required: true
 
   - type: textarea
     id: proposal
     attributes:
-      label: 제안하는 동작 / Proposed behavior
-      placeholder: "위젯 설정에서 팀을 고르면 그 팀 경기만 필터링해서 표시"
+      label: Proposed behavior
+      placeholder: "Pick a team in the widget config; only that team's matches are listed."
     validations:
       required: true
 
   - type: textarea
     id: alternatives
     attributes:
-      label: 고려한 대안 / Alternatives considered
-      description: 선택 사항입니다.
+      label: Alternatives considered
+      description: Optional.
 
   - type: checkboxes
     id: checks
     attributes:
-      label: 확인 / Checklist
+      label: Checklist
       options:
-        - label: "`RemoteViews` 제약에 걸리지 않는 기능입니다 / This doesn't require anything `RemoteViews` forbids"
+        - label: "This doesn't require anything `RemoteViews` forbids"
           required: true
-        - label: "리그·팀 로고 이미지를 추가하는 제안이 아닙니다 / This doesn't add league or team logo imagery"
+        - label: "This doesn't add league or team logo imagery"
           required: true

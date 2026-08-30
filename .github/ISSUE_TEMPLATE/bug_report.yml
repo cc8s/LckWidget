@@ -1,35 +1,32 @@
-name: 버그 리포트 / Bug report
-description: 위젯이나 앱이 예상과 다르게 동작할 때
+name: Bug report
+description: The widget or app behaves differently than expected
 labels: ["bug"]
 body:
   - type: markdown
     attributes:
       value: |
-        위젯 동작은 런처와 제조사 배터리 정책에 크게 영향을 받습니다.
-        아래 환경 정보를 꼭 채워 주세요. 없으면 재현이 어렵습니다.
-
-        Widget behavior depends heavily on the launcher and OEM battery policy,
-        so please fill in the environment fields — without them we usually
-        cannot reproduce the issue.
+        Widget behavior depends heavily on the launcher and the manufacturer's
+        battery policy, so please fill in the environment fields. Without them
+        we usually cannot reproduce the issue.
 
   - type: textarea
     id: what-happened
     attributes:
-      label: 무슨 일이 있었나요? / What happened?
-      description: 기대한 동작과 실제 동작을 함께 적어 주세요.
+      label: What happened?
+      description: Describe both what you expected and what actually happened.
       placeholder: |
-        기대: 다음 경기 3개가 표시됨
-        실제: "예정된 경기가 없습니다"만 표시됨
+        Expected: the next three matches are listed
+        Actual: only "예정된 경기가 없습니다" (no upcoming matches) is shown
     validations:
       required: true
 
   - type: textarea
     id: steps
     attributes:
-      label: 재현 방법 / Steps to reproduce
+      label: Steps to reproduce
       placeholder: |
-        1. 위젯을 4x2 크기로 추가
-        2. 화면을 껐다가 다시 켬
+        1. Add the widget at 4x2
+        2. Turn the screen off and back on
         3. ...
     validations:
       required: true
@@ -37,8 +34,7 @@ body:
   - type: input
     id: app-version
     attributes:
-      label: 앱 버전 / App version
-      description: 앱 화면 하단 또는 설정 > 애플리케이션에서 확인할 수 있습니다.
+      label: App version
       placeholder: "1.0.0"
     validations:
       required: true
@@ -46,7 +42,7 @@ body:
   - type: input
     id: device
     attributes:
-      label: 기기와 안드로이드 버전 / Device and Android version
+      label: Device and Android version
       placeholder: "Galaxy S24, Android 15 (One UI 7)"
     validations:
       required: true
@@ -54,35 +50,34 @@ body:
   - type: input
     id: launcher
     attributes:
-      label: 런처 / Launcher
-      description: 기본 런처를 쓰신다면 "기본"이라고만 적어 주세요.
+      label: Launcher
+      description: Just say "stock" if you use the one your device shipped with.
       placeholder: "One UI Home / Pixel Launcher / Nova"
     validations:
       required: true
 
   - type: dropdown
-    id: network
+    id: when
     attributes:
-      label: 문제가 발생한 상황 / When it happens
+      label: When does it happen?
       options:
-        - 항상 / Always
-        - 오프라인일 때만 / Only offline
-        - 일정 시간이 지난 뒤 / After some time has passed
-        - 위젯을 방금 추가했을 때 / Right after adding the widget
-        - 잘 모르겠음 / Not sure
+        - Always
+        - Only when offline
+        - After some time has passed
+        - Right after adding the widget
+        - Not sure
     validations:
       required: true
 
   - type: textarea
     id: screenshot
     attributes:
-      label: 스크린샷 / Screenshot
-      description: 위젯이 보이는 상태를 찍어서 붙여 주시면 큰 도움이 됩니다.
+      label: Screenshot
+      description: A photo of the widget as it appears helps a lot.
 
   - type: textarea
     id: logs
     attributes:
-      label: 로그 / Logs
-      description: |
-        가능하면 `adb logcat -s LCK` 출력을 붙여 주세요. 선택 사항입니다.
+      label: Logs
+      description: Output of `adb logcat -s LCK`, if you can get it. Optional.
       render: shell
