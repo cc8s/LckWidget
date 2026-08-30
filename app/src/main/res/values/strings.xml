@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">LCKWidget</string>
+    <string name="widget_description">LCK 다음 경기 일정</string>
+</resources>

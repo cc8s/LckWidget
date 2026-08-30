@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  LckWidget 자체 제작 런처 아이콘 전경. 위젯 헤더 마크(ic_widget_mark)와 같은
+  모티브이며, 어댑티브 아이콘 세이프존(중앙 66dp) 안에 배치되어 있습니다.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:pathData="M34,41h40 M34,54h29 M34,67h18"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="9.5"
+        android:strokeLineCap="round" />
+</vector>

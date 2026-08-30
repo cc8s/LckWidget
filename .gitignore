@@ -1,0 +1,21 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+.kotlin
+
+# 서명 키 — 절대 커밋하지 않습니다
+*.jks
+*.keystore
+keystore.properties
+
+# JVM 크래시 덤프
+hs_err_pid*.log
+replay_pid*.log
+*.hprof

@@ -1,0 +1,15 @@
+<!--
+  LckWidget 자체 제작 마크. 경기 일정(리스트)을 형상화한 도형이며
+  리그·팀·주최사의 상표나 로고와 무관합니다.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:pathData="M3,4.5h18 M3,12h13 M3,19.5h8"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3"
+        android:strokeLineCap="round" />
+</vector>
